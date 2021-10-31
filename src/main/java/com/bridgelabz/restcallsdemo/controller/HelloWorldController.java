@@ -24,5 +24,10 @@ public class HelloWorldController
         return "Hello from bridgelabz!";
     }
 
+    @RequestMapping(value="/query", method=RequestMethod.GET)
+    public String sayHello(@RequestParam(value="name") String name) 
+    {
+        return "Hello "+name+"!";
+    }
 
 }
